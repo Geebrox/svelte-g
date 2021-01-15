@@ -1,0 +1,10 @@
+{
+  "name": "g-slider-storefront",
+  "version": "0.1.0",
+  "description": "Storefront APP of the G-Slider Shopify App",
+  "main": "src/main.js",
+  "repository": "https://github.com/Geebrox/g-slider-storefront.git",
+  "author": "bek <geebrox@gmail.com>",
+  "license": "MIT",
+  "private": false
+}
