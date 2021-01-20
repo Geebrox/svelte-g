@@ -1,1 +1,1 @@
-# G-Slider Storefront
+# Svelte G.
