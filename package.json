@@ -6,5 +6,60 @@
   "repository": "https://github.com/Geebrox/g-slider-storefront.git",
   "author": "bek <geebrox@gmail.com>",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server",
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint:es": "eslint ./src/**/*.js ./src/**/*.svelte",
+    "lint:fix:es": "eslint --fix ./src/**/*.js ./src/**/*.svelte"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(js|jsx)": [
+      "yarn lint:fix:es",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "autoprefixer": "^10.2.1",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-object-to-json-parse": "^0.2.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "cssnano": "^4.1.10",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.17.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-svelte3": "^3.0.0",
+    "html-webpack-plugin": "^4.5.1",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.4",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "svelte": "^3.31.2",
+    "svelte-loader": "^2.13.6",
+    "tinify-loader": "^1.0.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "core-js": "^3.8.2",
+    "regenerator-runtime": "^0.13.7",
+    "tailwindcss": "^2.0.2"
+  }
 }
